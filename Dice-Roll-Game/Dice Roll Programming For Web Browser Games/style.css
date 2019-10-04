@@ -1,0 +1,17 @@
+.dies{
+    float: left;
+    width: 32px;
+    background: #f5f5f5;
+    border: gold 1px solid;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    color: blue;
+}
+.div button{
+    width: 10px;
+}
+body{
+    background-color: aquamarine;
+}
