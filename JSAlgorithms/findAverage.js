@@ -5,3 +5,6 @@ function findAverage(array) {
     }
     return runningTotal / array.length;
 }
+
+let test = [3, -1, 0, 9];
+console.log(findAverage(test));
