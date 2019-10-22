@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Digital Watch</title>
+  <style>
+    body {
+      background: #333;
+      text-align: center;
+    }
+
+    #greeting {
+      color: white;
+      font-family: Arial;
+      font-size: 1.6em;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-family: Arial;
+      font-size: 3.5em;
+      color: white;
+    }
+
+    .clock {
+      font-size: 4em;
+      text-align: center;
+      margin: 80px auto;
+      color: red;
+      font-family: Arial;
+    }
+
+    .clock span {
+      padding: 20px;
+      background: #260C0C;
+      width: 250px;
+      height: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="greeting">Hello Aspiring World Class Developers</p>
+  <p id="message">Here you go! Enjoy Your Digital Watch</p>
+  <div class="clock"></div>
+  <script>
+    const date = new Date();
+    const digital_clock = document.querySelector('.clock')
+
+    const tick = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const createClockHtml = `
+  <span>${hour}</span> :
+  <span>${minutes}</span> :
+  <span>${seconds}</span> 
+  `
+      digital_clock.innerHTML = createClockHtml;
+    }
+    setInterval(tick, 1000);
+
+  </script>
+</body>
+
+</html>
